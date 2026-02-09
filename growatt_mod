@@ -1,0 +1,670 @@
+    sensors:
+    - name: Inverter Haus Status
+      unique_id: status_haus
+      slave: 1
+      address: 3000
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 1
+      state_class: measurement	 #energy
+      #device_class: energy
+      #swap: none
+      #unit_of_measurement: W
+      offset: 0
+      #precision: 2
+      scan_interval: 60
+    - name: Solarproduktion Haus
+      unique_id: ppv_haus
+      slave: 1
+      address: 3001
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      #state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung String 1 Haus
+      unique_id: Vpv1_haus
+      slave: 1
+      address: 3003
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom String 1 Haus
+      unique_id: Cpv1_haus
+      slave: 1
+      address: 3004
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung String 1 Haus
+      unique_id: Ppv1_haus
+      slave: 1
+      address: 3005
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung String 2 Haus
+      unique_id: Vpv2_haus
+      slave: 1
+      address: 3007
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom String 2 Haus
+      unique_id: Cpv2_haus
+      slave: 1
+      address: 3008
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung String 2 Haus
+      unique_id: Ppv2_haus
+      slave: 1
+      address: 3009
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung System Haus
+      unique_id: Psys_haus
+      slave: 1
+      address: 3019
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung AC Haus
+      unique_id: Pac_haus
+      slave: 1
+      address: 3023
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: int32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Frequenz AC Haus
+      unique_id: Fac_haus
+      slave: 1
+      address: 3025
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.01
+      #state_class: FREQUENCY	# energy
+      device_class: frequency
+      #swap: none
+      unit_of_measurement: 'Hz'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung L1 Haus
+      unique_id: Vac1_haus
+      slave: 1
+      address: 3026
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom L1 Haus
+      unique_id: Iac1_haus
+      slave: 1
+      address: 3027
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung L1 Haus
+      unique_id: Pac1_haus
+      slave: 1
+      address: 3028
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: apparent_power
+      #swap: none
+      unit_of_measurement: 'VA'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung L2 Haus
+      unique_id: Vac2_haus
+      slave: 1
+      address: 3030
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom L2 Haus
+      unique_id: Iac2_haus
+      slave: 1
+      address: 3031
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung L2 Haus
+      unique_id: Pac2_haus
+      slave: 1
+      address: 3032
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: apparent_power
+      #swap: none
+      unit_of_measurement: 'VA'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung L3 Haus
+      unique_id: Vac3_haus
+      slave: 1
+      address: 3034
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom L3 Haus
+      unique_id: Iac3_haus
+      slave: 1
+      address: 3035
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung L3 Haus
+      unique_id: Pac3_haus
+      slave: 1
+      address: 3036
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: apparent_power
+      #swap: none
+      unit_of_measurement: 'VA'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Netzimport
+      unique_id: Ptouser_total_haus
+      slave: 1
+      address: 3041
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: NetzExport
+      unique_id: Ptogrid_total_haus
+      slave: 1
+      address: 3043
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Hausverbrauch
+      unique_id: Ptoload_total_haus
+      slave: 1
+      address: 3045
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      #state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: AC Produktion heute
+      unique_id: Eac_today_haus
+      slave: 1
+      address: 3049
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: AC Produktion Gesamt
+      unique_id: Eac_total_haus
+      slave: 1
+      address: 3051
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: PV Produktion Gesamt
+      unique_id: Epv_total_haus
+      slave: 1
+      address: 3053
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Eigenverbrauch Tag
+      unique_id: Etouser_today_haus
+      slave: 1
+      address: 3067
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Eigenverbrauch Gesamt
+      unique_id: Etouser_total_haus
+      slave: 1
+      address: 3069
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Netzexport Tag
+      unique_id: Etogrid_today_haus
+      slave: 1
+      address: 3071
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Netzexport Gesamt
+      unique_id: Etogrid_total_haus
+      slave: 1
+      address: 3073
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Stromverbrauch Tag
+      unique_id: Etoload_today_haus
+      slave: 1
+      address: 3075
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Stromverbrauch Gesamt
+      unique_id: Etoload_total_haus
+      slave: 1
+      address: 3077
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Isolationswiderstand Haus
+      unique_id: Riso_haus
+      slave: 1
+      address: 3087
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.001
+      state_class: measurement	# energy
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'MOhm'
+      offset: 0
+      precision: 1
+      scan_interval: 120
+    - name: Busspannung Haus
+      unique_id: Vbus_haus
+      slave: 1
+      address: 3092
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'V'
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Pself Haus
+      unique_id: Pself_haus
+      slave: 1
+      address: 3121
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Eself Tag Haus
+      unique_id: Eself_today_haus
+      slave: 1
+      address: 3139
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Eself Gesamt Haus
+      unique_id: Eself_total_haus
+      slave: 1
+      address: 3141
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Betriebszustand Haus
+      unique_id: Workmode_haus
+      slave: 1
+      address: 3144
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 1
+      state_class: measurement	# energy
+      #device_class: energy
+      #swap: none
+      #unit_of_measurement: 'kWh'
+      offset: 0
+      #precision: 1
+      scan_interval: 10
+    - name: Batteriespannung Haus
+      unique_id: Vbat_haus
+      slave: 1
+      address: 3169
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.01
+      state_class: measurement	# energy
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: V
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Batteriestrom Haus
+      unique_id: Ibat_haus
+      slave: 1
+      address: 3170
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      #device_class: energy
+      #swap: none
+      unit_of_measurement: A
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Ladezustand
+      unique_id: SoC_haus
+      slave: 1
+      address: 3171
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 1
+      #state_class: measurement	# energy
+      device_class: battery
+      #swap: none
+      unit_of_measurement: '%'
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Entladeleistung
+      unique_id: Pdischarge_haus
+      slave: 1
+      address: 3178
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Ladeleistung
+      unique_id: Pcharge_haus
+      slave: 1
+      address: 3180
+      #count: 2
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      device_class: power
+      #swap: none
+      unit_of_measurement: W
+      offset: 0
+      precision: 1
+      scan_interval: 10
+    - name: Ladeleistung Tag
+      unique_id: Pcharge_day
+      slave: 1
+      address: 3129
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      device_class: energy
+      state_class: total_increasing
+      unit_of_measurement: kWh
+      offset: 0
+      precision: 1
+      scan_interval: 30
+    - name: Entladeleistung Tag
+      unique_id: Pdischarge_day
+      slave: 1
+      address: 3125
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      device_class: energy
+      state_class: total_increasing
+      unit_of_measurement: kWh
+      offset: 0
+      precision: 1
+      scan_interval: 30
