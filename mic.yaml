@@ -1,0 +1,193 @@
+    sensors:
+    - name: Inverter Garage Status
+      unique_id: status_garage
+      slave: 2
+      address: 3000
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 1
+      state_class: measurement
+      offset: 0
+      scan_interval: 60
+    - name: Solarproduktion Garage
+      unique_id: ppv_garage
+      slave: 2
+      address: 3001
+      input_type: input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement
+      device_class: power
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung String 1 Garage
+      unique_id: Vpv1_garage
+      slave: 2
+      address: 3003
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom String 1 Garage
+      unique_id: Cpv1_garage
+      slave: 2
+      address: 3004
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung String 1 Garage
+      unique_id: Ppv1_garage
+      slave: 2
+      address: 3005
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung System Garage
+      unique_id: Psys_garage
+      slave: 2
+      address: 3019
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung AC Garage
+      unique_id: Pac_garage
+      slave: 2
+      address: 3023
+      input_type: input # discrete_input, coil, holding or input
+      data_type: int32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: power
+      unit_of_measurement: W
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Frequenz AC Garage
+      unique_id: Fac_garage
+      slave: 2
+      address: 3025
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.01
+      #state_class: FREQUENCY	# energy
+      device_class: frequency
+      unit_of_measurement: 'Hz'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Spannung L1 Garage
+      unique_id: Vac1_garage
+      slave: 2
+      address: 3026
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: voltage
+      unit_of_measurement: V
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Strom L1 Garage
+      unique_id: Iac1_garage
+      slave: 2
+      address: 3027
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: current
+      unit_of_measurement: A
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: Leistung L1 Garage
+      unique_id: Pac1_garage
+      slave: 2
+      address: 3028
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: measurement	# energy
+      device_class: apparent_power
+      unit_of_measurement: 'VA'
+      offset: 0
+      precision: 2
+      scan_interval: 10
+    - name: AC Produktion heute Garage
+      unique_id: Eac_today_garage
+      slave: 2
+      address: 3049
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 300
+    - name: AC Produktion Gesamt Garage
+      unique_id: Eac_total_garage
+      slave: 2
+      address: 3051
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 300
+    - name: PV Produktion Gesamt Garage
+      unique_id: Epv_total_garage
+      slave: 2
+      address: 3053
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint32
+      scale: 0.1
+      state_class: total_increasing
+      #device_class: energy
+      unit_of_measurement: 'kWh'
+      offset: 0
+      precision: 2
+      scan_interval: 300
+    - name: Isolationswiderstand Garage
+      unique_id: Riso_garage
+      slave: 2
+      address: 3087
+      input_type: input # discrete_input, coil, holding or input
+      data_type: uint16
+      scale: 0.001
+      state_class: measurement	# energy
+      #device_class: energy
+      unit_of_measurement: 'MOhm'
+      offset: 0
+      precision: 1
+      scan_interval: 300
